@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080609">
+  <meta name="description" content="BGB.JAILBREAK developer command center">
+  <title>BGB.JAILBREAK Command Center</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" data-page="dashboard" aria-label="Go to dashboard">
+        <span class="brand-mark">B</span>
+        <span><strong>BGB<span>.</span>JAILBREAK</strong><small>DEVELOPER COMMAND CENTER</small></span>
+      </button>
+      <div class="top-actions">
+        <span class="online-dot"></span><span class="online-label">LOCAL MODE</span>
+        <button class="icon-btn" id="menuToggle" aria-label="Open navigation">☰</button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="side-label">WORKSPACE</div>
+      <nav id="navigation">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-item" data-page="commands"><span>⌘</span> Command directory</button>
+        <button class="nav-item" data-page="lab"><span>⌁</span> Code lab</button>
+        <button class="nav-item" data-page="tools"><span>⚒</span> Developer tools</button>
+        <button class="nav-item" data-page="security"><span>⬡</span> Security center</button>
+        <button class="nav-item" data-page="terms"><span>▤</span> Terms of service</button>
+        <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+        <button class="nav-item" data-page="about"><span>ⓘ</span> About</button>
+      </nav>
+      <div class="sidebar-foot"><span class="pulse"></span> SYSTEM READY <small>VERSION 1.0.0</small></div>
+    </aside>
+
+    <main class="main-content">
+      <div class="mobile-heading"><span class="eyebrow">BGB / WORKSPACE</span><span class="live-pill">● READY</span></div>
+      <section class="page active" id="page-dashboard">
+        <div class="hero">
+          <div><div class="eyebrow">COMMAND CENTER / OVERVIEW</div><h1>Welcome back<span class="pink">.</span></h1>
+          <p>Your development workspace is ready. Choose a tool and get building.</p></div>
+          <div class="hero-symbol">B<span>_</span></div>
+        </div>
+        <div class="stat-grid">
+          <article class="stat-card"><span class="stat-icon">◈</span><strong>READY</strong><small>Workspace status</small></article>
+          <article class="stat-card"><span class="stat-icon">⌘</span><strong>10</strong><small>Quick commands</small></article>
+          <article class="stat-card"><span class="stat-icon">⌁</span><strong>08</strong><small>Code environments</small></article>
+        </div>
+        <div class="section-heading"><div><div class="eyebrow">SHORTCUTS</div><h2>Quick access</h2></div></div>
+        <div class="quick-grid">
+          <button class="quick-card" data-page="lab"><span>⌁</span><b>Open Code Lab</b><small>Start a development project</small><i>↗</i></button>
+          <button class="quick-card" data-page="commands"><span>⌘</span><b>Commands</b><small>Browse available commands</small><i>↗</i></button>
+          <button class="quick-card" data-page="tools"><span>⚒</span><b>Developer tools</b><small>Plan, review and improve</small><i>↗</i></button>
+          <button class="quick-card" data-page="security"><span>⬡</span><b>Security center</b><small>Build safer software</small><i>↗</i></button>
+        </div>
+        <div class="notice"><span>✦</span><div><b>Local-first workspace</b><small>Your entries stay in this browser. This starter app does not connect to external systems or execute code.</small></div></div>
+      </section>
+
+      <section class="page" id="page-commands">
+        <div class="eyebrow">WORKSPACE / COMMANDS</div><h1>Command directory<span class="pink">.</span></h1>
+        <p class="intro">Search, select and copy a command to use in your workflow.</p>
+        <label class="search-box"><span>⌕</span><input id="commandSearch" type="search" placeholder="Search commands..."></label>
+        <div id="commandList" class="stack-list"></div>
+      </section>
+
+      <section class="page" id="page-lab">
+        <div class="eyebrow">WORKSPACE / DEVELOPMENT</div><h1>Code lab<span class="pink">.</span></h1>
+        <p class="intro">Choose a stack to create a project brief and starter plan.</p>
+        <div class="tile-grid" id="labGrid"></div>
+        <div class="panel editor-panel">
+          <div class="panel-head"><div><span class="eyebrow">PROJECT WORKSPACE</span><h2>Project brief</h2></div><button class="small-btn" id="copyBrief">COPY TEXT</button></div>
+          <textarea id="projectBrief" placeholder="Choose a development stack above, or write your project idea here..."></textarea>
+          <p class="muted">This workspace prepares project plans; it does not compile or run code.</p>
+        </div>
+      </section>
+
+      <section class="page" id="page-tools">
+        <div class="eyebrow">WORKSPACE / UTILITIES</div><h1>Developer tools<span class="pink">.</span></h1>
+        <p class="intro">Structured helpers for planning and improving software.</p>
+        <div class="tool-grid" id="toolGrid"></div>
+      </section>
+
+      <section class="page" id="page-security">
+        <div class="eyebrow">WORKSPACE / PROTECTION</div><h1>Security center<span class="pink">.</span></h1>
+        <p class="intro">A practical checklist for responsible, authorized development.</p>
+        <div class="checklist panel">
+          <label><input type="checkbox"> Validate and sanitize user input</label>
+          <label><input type="checkbox"> Keep API keys and secrets out of client code</label>
+          <label><input type="checkbox"> Use trusted, maintained dependencies</label>
+          <label><input type="checkbox"> Request only necessary permissions</label>
+          <label><input type="checkbox"> Protect personal and account information</label>
+          <label><input type="checkbox"> Test only systems you own or have permission to assess</label>
+          <label><input type="checkbox"> Review errors without exposing sensitive data</label>
+        </div>
+      </section>
+
+      <section class="page" id="page-terms">
+        <div class="eyebrow">WORKSPACE / POLICIES</div><h1>Terms of service<span class="pink">.</span></h1>
+        <div class="policy-list">
+          <article class="panel"><h3>01 / Authorized usage</h3><p>Use development and testing features only on projects and systems you own or are authorized to work on.</p></article>
+          <article class="panel"><h3>02 / Privacy</h3><p>This starter app stores settings locally in your browser. Do not enter passwords, private keys or sensitive personal information.</p></article>
+          <article class="panel"><h3>03 / Responsible development</h3><p>Build software that respects users, services, applicable rules and security boundaries.</p></article>
+          <article class="panel"><h3>04 / Intellectual property</h3><p>Make sure you have the rights to use code, images, names and other assets included in your projects.</p></article>
+          <article class="panel"><h3>05 / Accountability</h3><p>You are responsible for reviewing, testing and understanding code before using or publishing it.</p></article>
+        </div>
+      </section>
+
+      <section class="page" id="page-settings">
+        <div class="eyebrow">WORKSPACE / PREFERENCES</div><h1>Settings<span class="pink">.</span></h1>
+        <div class="panel settings-panel">
+          <div><h3>Interface theme</h3><p class="muted">Choose the accent color for your workspace.</p></div>
+          <div class="theme-options"><button data-theme="pink" class="theme-choice selected">Neon pink</button><button data-theme="red" class="theme-choice">Crimson</button></div>
+          <hr><div class="setting-row"><div><b>Motion effects</b><small>Subtle interface transitions</small></div><input type="checkbox" id="motionToggle" checked></div>
+          <hr><button class="danger-btn" id="resetSettings">Reset settings</button>
+        </div>
+      </section>
+
+      <section class="page" id="page-about">
+        <div class="eyebrow">WORKSPACE / INFORMATION</div><h1>About BGB<span class="pink">.</span></h1>
+        <div class="about-card panel"><div class="about-logo">B<span>_</span></div><h2>BGB.JAILBREAK</h2><p class="pink-text">ADVANCED DEVELOPER COMMAND CENTER</p><p class="muted">A customizable, mobile-friendly workspace for software project planning, code organization and responsible development.</p><div class="about-meta"><span>VERSION</span><b>1.0.0</b><span>BUILD</span><b>WEB / PWA</b><span>STORAGE</span><b>LOCAL</b></div></div>
+      </section>
+
+      <footer> BGB.JAILBREAK <span>•</span> BUILD YOUR IDEAS.</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "BGB.JAILBREAK Command Center",
+  "short_name": "BGB.JAILBREAK",
+  "description": "Mobile developer command center",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080609",
+  "theme_color": "#080609",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
